@@ -1,133 +1,130 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Manager : MonoBehaviour
 {
-	#region Public variables
+    #region Public variables
 
-	public GameObject BoomerangObject;
-	public GameObject Hexagon;
+    public GameObject BoomerangObject;
+    public GameObject Hexagon;
+    public Text GenerationText;
 
-	#endregion
+    #endregion
 
-	#region Private variables
+    #region Private variables
 
-	private bool isTraning = false;
+    private bool _isTraning = false;
 
-	private int populationSize = 50;
-	public int generationNumber = 0;
-	private int[] layers = new int[] { 1, 10, 10, 1 };
+    private int populationSize = 50;
+    private int generationNumber = 0;
 
-	private List<RNetwork> rNetworks;
-	private List<Boomerang> boomerangList = null;
+    private readonly int[] layers = new int[]
+    {
+        1,
+        10,
+        10,
+        1
+    };
 
-	private bool leftMouseDown = false;
+    private List<RNetwork> rNetworks;
+    private List<Boomerang> boomerangList = null;
 
-	#endregion
+    private bool leftMouseDown = false;
 
-	#region Unity methods
+    #endregion
 
-	private void Update()
-	{
-		if (isTraning == false)
-		{
-			if (generationNumber == 0)
-			{
-				InitBoomerangNeuralNetworks();
-			}
-			else
-			{
-				rNetworks.Sort();
+    #region Unity methods
 
-				for (int i = 0; i < populationSize / 2; i++)
-				{
-					rNetworks[i] = new RNetwork(rNetworks[i + (populationSize / 2)]);
-					rNetworks[i].Mutate();
+    private void Update ()
+    {
+        GenerationText.text = $"Текущее количество поколений: {generationNumber}";
 
-					rNetworks[i + (populationSize / 2)] = new RNetwork(rNetworks[i + (populationSize / 2)]);
-				}
+        if (_isTraning == false)
+        {
+            if (generationNumber == 0)
+            {
+                InitBoomerangNeuralNetworks();
+            }
+            else
+            {
+                rNetworks.Sort();
 
-				for (int i = 0; i < populationSize; i++)
-				{
-					rNetworks[i].SetFitness(0f);
-				}
-			}
+                for (int i = 0; i < populationSize / 2; i++)
+                {
+                    rNetworks[i] = new RNetwork(rNetworks[i + (populationSize / 2)]);
+                    rNetworks[i].Mutate();
 
-			generationNumber++;
-			isTraning = true;
+                    rNetworks[i + (populationSize / 2)] = new RNetwork(rNetworks[i + (populationSize / 2)]);
+                }
 
-			Invoke("Timer", 15f);
+                for (int i = 0; i < populationSize; i++)
+                    rNetworks[i].SetFitness(0f);
+            }
 
-			CreateBoomerangBodies();
-		}
+            generationNumber++;
+            _isTraning = true;
 
-		if (Input.GetMouseButtonDown(0))
-		{
-			leftMouseDown = true;
-		}
-		else if (Input.GetMouseButtonUp(0))
-		{
-			leftMouseDown = false;
-		}
+            Invoke("Timer", 15f);
 
-		if (leftMouseDown == true)
-		{
-			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Hexagon.transform.position = mousePosition;
-		}
-	}
+            CreateBoomerangBodies();
+        }
 
-	#endregion
+        if (Input.GetMouseButtonDown(0))
+            leftMouseDown = true;
+        else if (Input.GetMouseButtonUp(0))
+            leftMouseDown = false;
 
-	#region Private methods
+        if (leftMouseDown == true)
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Hexagon.transform.position = mousePosition;
+        }
+    }
 
-	private void Timer()
-	{
-		isTraning = false;
-	}
+    #endregion
 
-	private void CreateBoomerangBodies()
-	{
-		if (boomerangList != null)
-		{
-			for (int i = 0; i < boomerangList.Count; i++)
-			{
-				Destroy(boomerangList[i].gameObject);
-			}
-		}
+    #region Private methods
 
-		boomerangList = new List<Boomerang>();
+    private void Timer () => _isTraning = false;
 
-		for (int i = 0; i < populationSize; i++)
-		{
-			Boomerang boomerang = Instantiate(BoomerangObject,
-				new Vector3(Random.Range(-10f, 10f),
-				Random.Range(-10f, 10f), 0),
-				BoomerangObject.transform.rotation).GetComponent<Boomerang>();
+    private void CreateBoomerangBodies ()
+    {
+        if (boomerangList != null)
+            for (int i = 0; i < boomerangList.Count; i++)
+                Destroy(boomerangList[i].gameObject);
 
-			boomerang.Init(rNetworks[i], Hexagon.transform);
+        boomerangList = new List<Boomerang>();
 
-			boomerangList.Add(boomerang);
-		}
-	}
+        for (int i = 0; i < populationSize; i++)
+        {
+            Boomerang boomerang = Instantiate(BoomerangObject,
+                new Vector3(Random.Range(-10f, 10f),
+                    Random.Range(-10f, 10f), 0),
+                BoomerangObject.transform.rotation).GetComponent<Boomerang>();
 
-	private void InitBoomerangNeuralNetworks()
-	{
-		if (populationSize % 2 != 0)
-		{
-			populationSize = 20;
-		}
+            boomerang.Init(rNetworks[i], Hexagon.transform);
 
-		rNetworks = new List<RNetwork>();
+            boomerangList.Add(boomerang);
+        }
+    }
 
-		for (int i = 0; i < populationSize; i++)
-		{
-			RNetwork rNetwork = new RNetwork(layers);
-			rNetwork.Mutate();
+    private void InitBoomerangNeuralNetworks ()
+    {
+        if (populationSize % 2 != 0)
+            populationSize = 20;
 
-			rNetworks.Add(rNetwork);
-		}
-	}
+        rNetworks = new List<RNetwork>();
 
-	#endregion
+        for (int i = 0; i < populationSize; i++)
+        {
+            RNetwork rNetwork = new RNetwork(layers);
+            rNetwork.Mutate();
+
+            rNetworks.Add(rNetwork);
+        }
+    }
+
+    #endregion
 }

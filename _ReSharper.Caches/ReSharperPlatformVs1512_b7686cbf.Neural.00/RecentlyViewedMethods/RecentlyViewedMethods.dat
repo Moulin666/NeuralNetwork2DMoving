@@ -1,0 +1,19 @@
+﻿<RecentlyViewedMethods>
+  <RecentlyViewedMethods>
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3AManager.CreateBoomerangBodies" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.CompareTo%28RNetwork%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.SetFitness%28System.Single%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.MutateWeight%28System.Single%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.%23ctor%28RNetwork%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.%23ctor%28System.Int32%5B%5D%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/F%3ARNetwork._layers" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.CopyWeights%28System.Single%5B%5D%5B%5D%5B%5D%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.CopyWeights%28System.Single%5B%5D%5B%5D%5B%5D%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.Initialize" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.AddFitness%28System.Single%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.AddFitness%28System.Single%29" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ARNetwork.Mutate" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ABoomerang.Start" />
+    <RecentMethod id="21ae89fd-a42b-2202-9f88-57e99d77fa55%28Assembly-CSharp%29-13%5B.NETFramework%2CVersion%3Dv4.7.1%5D/M%3ABoomerang.FixedUpdate" />
+  </RecentlyViewedMethods>
+</RecentlyViewedMethods>
