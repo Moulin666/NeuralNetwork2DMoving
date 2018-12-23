@@ -614,7 +614,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 6e94db84-823e-4dda-b5f2-1a587e02dfda
   projectName: Neural
   organizationId: roman_mouse

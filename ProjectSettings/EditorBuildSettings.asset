@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_scenes/neural.unity
+    guid: a2b7dac7b7913f449b4c2e0de07f6db2
+  m_configObjects: {}

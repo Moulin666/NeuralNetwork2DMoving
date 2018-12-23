@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 767
-  m_MinSize: {x: 817, y: 492}
-  m_MaxSize: {x: 22012, y: 14042}
+  m_MinSize: {x: 813, y: 471}
+  m_MaxSize: {x: 22008, y: 14021}
   vertical: 0
-  controlID: 113
+  controlID: 114
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1140
     height: 767
-  m_MinSize: {x: 540, y: 492}
-  m_MaxSize: {x: 18010, y: 14042}
+  m_MinSize: {x: 536, y: 471}
+  m_MaxSize: {x: 18006, y: 14021}
   vertical: 1
-  controlID: 114
+  controlID: 115
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,10 +182,10 @@ MonoBehaviour:
     y: 496
     width: 1140
     height: 271
-  m_MinSize: {x: 540, y: 271}
-  m_MaxSize: {x: 18010, y: 10021}
+  m_MinSize: {x: 536, y: 271}
+  m_MaxSize: {x: 18006, y: 10021}
   vertical: 0
-  controlID: 115
+  controlID: 45
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -204,8 +204,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 271
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -497,9 +497,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2a2e0000
-    m_LastClickedID: 11818
-    m_ExpandedIDs: 3af3ffff44f3ffffdcfbffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e0dfffff98e0ffffdee2ffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -571,7 +571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 27}
     m_SelectedIDs: 02ca9a3b
     m_LastClickedID: 1000000002
-    m_ExpandedIDs: 000000007a2b0000aa2b0000e62c00007e2d0000ca2d0000
+    m_ExpandedIDs: 000000006e2b00009e2b0000da2c0000722d0000be2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -599,7 +599,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000007a2b0000aa2b0000e62c00007e2d0000ca2d0000
+    m_ExpandedIDs: ffffffff000000006e2b00009e2b0000da2c0000722d0000be2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

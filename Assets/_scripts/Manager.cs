@@ -41,6 +41,9 @@ public class Manager : MonoBehaviour
     {
         GenerationText.text = $"Текущее количество поколений: {generationNumber}";
 
+        if (Input.GetKeyUp(KeyCode.Escape))
+            Application.Quit();
+
         if (_isTraning == false)
         {
             if (generationNumber == 0)
